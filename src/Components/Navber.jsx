@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
 import profile from "../assets/Images/profile.jpg"
+import logo from "../assets/Images/logo.png"
 
 const Navber = () => {
 
     const navlinks = <>
      <li> <NavLink to="/">Home</NavLink></li>
-     <li> <NavLink to="/about">About</NavLink></li>
+     <li> <NavLink to="/about">About Us</NavLink></li>
      <li> <NavLink to="/services">Services</NavLink></li>
     
     </>
@@ -22,7 +23,7 @@ const Navber = () => {
        {navlinks}
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case font-bold text-xl">Cycling</a>
+    <img src={logo} alt="" />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
