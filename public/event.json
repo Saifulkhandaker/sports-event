@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "picture": "https://i.ibb.co/bzGkLbD/event1.jpg",
+        "title": "Northumberland Cycling Event 2023",
+        "location": "Northumberland",
+        "date": "11 Oct, 2023",
+        "price": 200,
+        "description": "The Northumberland Cycling Event 2023 is a thrilling cycling race held in the picturesque Northumberland region. Cyclists of all levels participated, enjoying scenic routes and challenging terrain. The event celebrated community spirit and a love for cycling in a stunning natural setting."
+     },
+     {
+        "id": 2,
+        "picture": "https://i.ibb.co/qW8NstN/event2.jpg",
+        "title": "Tour de Felasco 2023",
+        "location": "Felasco",
+        "date": "16 Oct, 2023",
+        "price": 400,
+        "description": "The Tour de Felasco 2023 is an exciting cycling event that took place in Felasco, Florida. It featured a variety of challenging routes, attracting cyclists from across the region. Participants experienced the thrill of competition while exploring the beautiful landscapes of Felasco."
+     },
+     {
+        "id": 3,
+        "picture": "https://i.ibb.co/khCtMDH/event3.jpg",
+        "title": "Covered Bridges Ride 2023",
+        "location": "Felasco",
+        "date": "23 Oct, 2023",
+        "price": 300,
+        "description": "The Covered Bridges Ride 2023 is a cycling event that showcased the charm of covered bridges in a picturesque setting. Cyclists rode through scenic routes, passing by historic covered bridges, and enjoying the beauty of the countryside in 2023."
+     },
+     {
+        "id": 4,
+        "picture": "https://i.ibb.co/Qvtx7pJ/event4.jpg",
+        "title": "Tour de Pig 2023",
+        "location": "North Carolina",
+        "date": "12 Nov, 2023",
+        "price": 100,
+        "description": "The Tour de Pig 2023 is a fun and unique cycling event that combined cycling and a love for barbecue. Cyclists pedaled through scenic routes in North Carolina, culminating in a delicious barbecue feast, celebrating both fitness and good food."
+     },
+     {
+        "id": 5,
+        "picture": "https://i.ibb.co/LdVTr3K/event5.jpg",
+        "title": "Giro di San Diego 2023",
+        "location": "San Diego",
+        "date": "30 Nov, 2023",
+        "price": 250,
+        "description": "The 2023 Giro di San Diego is an exciting cycling event that took place in the beautiful San Diego area. Cyclists from various backgrounds and skill levels participated in this challenging race, navigating scenic routes and experiencing the vibrant cycling community of San Diego."
+     },
+     {
+        "id": 6,
+        "picture": "https://i.ibb.co/YfBsxCm/event6.jpg",
+        "title": "Tour de Gruene TOURS 2023",
+        "location": "Gruene, Texas",
+        "date": "22 Dec, 2023",
+        "price": 200,
+        "description": "The 2023 Tour de Gruene TOURS (Tour de Gruene Tours) is an event associated with the Tour de Gruene cycling festival in Gruene, Texas. These tours offered cyclists various routes through the scenic Texas Hill Country, allowing participants to explore the natural beauty and cycling-friendly terrain of the region during the festival."
+     }
+     
+]
