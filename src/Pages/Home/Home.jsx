@@ -1,6 +1,7 @@
-import React from 'react';
+
 import Banner from '../../Components/Banner';
-import AboutUs from '../../Components/AboutUs';
+import AboutUs from '../About Us/AboutUs';
+
 
 const Home = () => {
     return (
