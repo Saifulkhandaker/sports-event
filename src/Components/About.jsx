@@ -11,7 +11,7 @@ const About = () => {
         </div>
         <div className="space-y-8 lg:text-left flex-1 text-[#777777]">
           <img className="ml-40 md:ml-80 lg:ml-0" src={uslogo} alt="" />
-          <h2 className="text-2xl lg:text-4xl  font-bold"><span className="text-[#FE3E01]">Dvents</span> Making Events Simpler
+          <h2 className="text-2xl lg:text-4xl font-bold"><span className="text-[#FE3E01]">Dvents</span> Making Events Simpler
           </h2>
           <p className="text-xl lg:text-2xl">
             Make your events smarter & impactful by personalised
