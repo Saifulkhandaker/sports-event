@@ -1,4 +1,5 @@
 import { BiTime, BiDollarCircle } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 
 
@@ -34,7 +35,9 @@ const Events = ({ event }) => {
                     </p>
             </div>
             <div className="card-actions">
+              <Link to={`/events/${id}`}>
               <button className="btn bg-[#fe3c01ce] text-white">More Details</button>
+              </Link>
             </div>
           </div>
         </div>
