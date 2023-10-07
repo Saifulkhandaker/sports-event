@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import profile from "../assets/Images/profile.jpg"
-import logo from "../assets/Images/logo.png"
+import logo from "../assets/Images/Logo.png"
 
 const Navber = () => {
 
