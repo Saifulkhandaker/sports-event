@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home";
 import AboutUs from "../Pages/About Us/AboutUs";
 import ErrorPage from "../Pages/ErrorPage";
 import SingleEvent from "../Components/SingleEvent";
+import Contact from "../Pages/Contact/Contact";
 
 
 const myCreatedRoute = createBrowserRouter([
@@ -20,6 +21,10 @@ const myCreatedRoute = createBrowserRouter([
             {
                 path: "/about",
                 element: <AboutUs></AboutUs>
+            },
+            {
+                path: "/contact",
+                element:<Contact></Contact>
             },
             {
                 path: "/events/:id",

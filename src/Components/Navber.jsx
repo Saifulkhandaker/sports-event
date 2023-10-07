@@ -5,8 +5,9 @@ import logo from "../assets/Images/Logo.png"
 const Navber = () => {
 
     const navlinks = <>
-     <li> <NavLink to="/">Home</NavLink></li>
-     <li> <NavLink to="/about">About Us</NavLink></li>
+     <li className="text-lg font-medium"> <NavLink to="/">Home</NavLink></li>
+     <li className="text-lg font-medium"> <NavLink to="/about">About</NavLink></li>
+     <li className="text-lg font-medium"> <NavLink to="/contact">Contact</NavLink></li>
     
     </>
 
