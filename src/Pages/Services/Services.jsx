@@ -1,3 +1,5 @@
+import EventServices from "../../Components/EventServices";
+import Events from "../../Components/Events";
 
 
 const Services = () => {

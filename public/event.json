@@ -5,31 +5,31 @@
         "title": "Wedding-Event",
         "price": 400,
         "time": "Day & Night",
-        "description": "Wedding events unite couples in love, marking the beginning of their lifelong journey. They include vows, ceremonies, receptions, and festivities, symbolizing commitment, unity, and joy. Family and friends gather to witness and celebrate this momentous occasion, creating cherished memories and strengthening bonds for the newlyweds."
+        "description": "Wedding events unite couples in love, marking the beginning of their lifelong journey. They include vows, ceremonies, receptions, and festivities, symbolizing commitment, unity, and joy."
      },
      {
         "id": 2,
-        "picture": "https://i.ibb.co/KmX9xTk/Anniversery-Event.jpg",
+        "picture": "https://i.ibb.co/sjnLdGV/Anniversery-Event.jpg",
         "title": "Anniversery-Event",
         "price": 200,
         "time": "Day",
-        "description": "Anniversary events hold deep sentimental value, celebrating enduring commitment, success, or historical milestones. They involve meticulous planning, captivating decorations, melodious tunes, heartfelt speeches, and toasts to mark the occasion. These gatherings evoke nostalgia, reinforce bonds, and inspire hope for the future, leaving lasting impressions in the hearts of all involved."
+        "description": "Anniversary events hold deep sentimental value, celebrating enduring commitment, success, or historical milestones. They involve meticulous planning, melodious tunes,and toasts to mark the occasion."
      },
      {
         "id": 3,
-        "picture": "https://i.ibb.co/FnFvwWs/Birthday-party-events.jpg",
+        "picture": "https://i.ibb.co/SmhvrbN/Birthday-party-events.jpg",
         "title": "Birthday-party",
         "price": 300,
         "time": "Day & Night",
-        "description": "Birthday party events celebrate the passage of time and personal growth. They typically involve cake, decorations, games, and gifts, creating a festive atmosphere. Friends and family come together to honor the individual, making them feel special and cherished on their day, fostering connections and joyful memories."
+        "description": "Birthday party events celebrate the passage of time and personal growth. They typically involve cake, decorations, games, and gifts, creating a festive atmosphere all around the party."
      },
      {
         "id": 4,
-        "picture": "https://i.ibb.co/ZdmT20Z/Engajement-Event.jpg",
+        "picture": "https://i.ibb.co/mvJKgbf/Engajement-Event.jpg",
         "title": "Engagement-Event",
         "price": 200,
         "time": "Day & Night",
-        "description": "Engagement events mark the beginning of a couple's journey to marriage. These celebrations often include a proposal, an engagement party, or both. They signify love, commitment, and the start of wedding planning. Family and friends gather to offer their blessings, making the occasion memorable and full of joy."
+        "description": "Engagement events mark the beginning of a couple's journey to marriage. These celebrations often include a proposal, an engagement party, or both. They signify love and the start of wedding planning."
      },
      {
         "id": 5,
@@ -37,7 +37,7 @@
         "title": "Baby-Shower",
         "price": 250,
         "time": "Day",
-        "description": "Baby shower events are joyful gatherings celebrating an expectant mother and her impending arrival. They feature games, gifts, and decorations, emphasizing love, support, and excitement for the upcoming addition to the family. Friends and family join to share well-wishes and prepare for the new chapter ahead, creating lasting memories."
+        "description": "Baby shower events are joyful gatherings celebrating an expectant mother and her impending arrival. They feature games, gifts,love, support, and excitement for the upcoming addition to the family."
      },
      {
         "id": 6,
@@ -45,7 +45,7 @@
         "title": "Retirement-event",
         "price": 200,
         "time": "Day & Night",
-        "description": "Retirement events mark the culmination of a career and the beginning of a new chapter in one's life. They often include speeches, gifts, and well-wishes, celebrating dedication and achievements. Friends and colleagues gather to honor the retiree, fostering nostalgia and anticipation for the retiree's future endeavors."
+        "description": "Retirement events mark the culmination of a career and the beginning of a new chapter in one's life. They often include speeches, gifts, and well-wishes, celebrating dedication and achievements."
      }
      
 ]
