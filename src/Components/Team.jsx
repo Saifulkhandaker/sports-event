@@ -5,7 +5,7 @@ import eventmanage2 from "../assets/Images/Event Manager 2.jpg";
 
 const Team = () => {
   return (
-    <div className="w-11/12 mx-auto mt-16 mb-10 text-center items-center ">
+    <div className="w-11/12 mx-auto mt-16 pb-20 text-center items-center ">
       <hr className="border-t-1 mt-4 border-red-300 w-[80%] mx-auto mb-10" />
       <div className="border py-5">
       <div className="space-y-5 mb-16">
