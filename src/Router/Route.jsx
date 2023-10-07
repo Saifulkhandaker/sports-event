@@ -5,6 +5,7 @@ import AboutUs from "../Pages/About Us/AboutUs";
 import ErrorPage from "../Pages/ErrorPage";
 import SingleEvent from "../Components/SingleEvent";
 import Contact from "../Pages/Contact/Contact";
+import News from "../Pages/News/News";
 
 
 const myCreatedRoute = createBrowserRouter([
@@ -25,6 +26,10 @@ const myCreatedRoute = createBrowserRouter([
             {
                 path: "/contact",
                 element:<Contact></Contact>
+            },
+            {
+                path: "/news",
+                element: <News></News>
             },
             {
                 path: "/events/:id",
