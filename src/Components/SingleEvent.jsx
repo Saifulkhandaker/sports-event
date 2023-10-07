@@ -34,6 +34,9 @@ const SingleEvent = () => {
         <p className="text-2xl font-medium">Price: <span className="text-[#fe3c01cb] text-3xl">{price}$</span></p>
         <p className="text-2xl font-medium">Time: <span className="text-[#fe3c01cb] text-3xl">{time}</span></p>
       </div>
+      <div>
+        <button className="text-white bg-[#fe3c01cb] btn mt-5 px-10 rounded-sm">Book Now</button>
+      </div>
     </div>
   );
 };
