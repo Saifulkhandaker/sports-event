@@ -1,13 +1,14 @@
 
+import About from '../../Components/About';
 import Banner from '../../Components/Banner';
-import AboutUs from '../About Us/AboutUs';
+
 
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <AboutUs></AboutUs>
+            <About></About>
             
         </div>
     );
