@@ -4,6 +4,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -15,6 +16,8 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
+
+  const navigate = useNavigate()
 
 const handleRegister = (e )=> {
   e.preventDefault();
@@ -30,6 +33,7 @@ const handleRegister = (e )=> {
       signUp(email, password)
       .then(result => 
         toast.success("successfully registered"));
+        navigate("/login")
     }
    }
 }
@@ -100,7 +104,7 @@ const handleRegister = (e )=> {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button onSubmit={handleRegister} className="btn btn-primary">Register</button>
+                <button onSubmit={handleRegister} className="btn bg-[#fe3c01d7] text-white">Register</button>
               </div>
               <p>Already have an account!!! Please <Link className="font-medium underline text-[#3cfe01]" to="/login">Login</Link></p>
             </form>
@@ -109,7 +113,7 @@ const handleRegister = (e )=> {
       </div>
       <ToastContainer
       position="top-center"
-autoClose={5000}
+autoClose={2000}
 hideProgressBar={false}
 newestOnTop={false}
 closeOnClick

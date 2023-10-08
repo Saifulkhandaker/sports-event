@@ -18,19 +18,19 @@ const Login = () => {
     })
   }
 
-
   const handleLogin = (e) => {
     e.preventDefault();
 
     if((email, password)){
       signIn(email, password).then(result =>{
+        setError('');
           toast.success("Successfully logged in")
       })
       .catch((err) => {
-        setError('');
         setError("Invalid email or password");
       })
     }
+
     
   };
 
@@ -76,10 +76,10 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button onSubmit={handleLogin} className="btn btn-primary">Login</button>
+                <button onSubmit={handleLogin} className="btn bg-[#fe3c01d7] text-white">Login</button>
               </div>
-              <button onClick={handleGoogle} className="btn btn-primary">Login with Google</button>
-              <p>Don't have an account!!! Please <Link className="font-medium underline text-[#FE3E01]" to="/register">Register</Link></p>
+              <button onClick={handleGoogle} className="btn bg-[#fe3c01d7] text-white">Login with Google</button>
+              <p>Don't have an account!!! Please <Link className="font-medium underline text-red-600" to="/register">Register</Link></p>
             </form>
             
           </div>
@@ -87,7 +87,7 @@ const Login = () => {
       </div>
       <ToastContainer
       position="top-center"
-autoClose={5000}
+autoClose={2000}
 hideProgressBar={false}
 newestOnTop={false}
 closeOnClick
