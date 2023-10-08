@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import profile from "../assets/Images/profile.jpg"
 import logo from "../assets/Images/Logo.png"
 
@@ -38,7 +38,9 @@ const Navber = () => {
           <img src={profile} />
         </div>
       </label>
-    <a className="btn">Login</a>
+   <Link to="/login" >
+   <button className="btn">Login</button>
+   </Link>
   </div>
 </div>      
 </div>

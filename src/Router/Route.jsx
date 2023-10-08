@@ -6,6 +6,8 @@ import ErrorPage from "../Pages/ErrorPage";
 import SingleEvent from "../Components/SingleEvent";
 import Contact from "../Pages/Contact/Contact";
 import News from "../Pages/News/News";
+import Login from "../Components/Login";
+import Register from "../Components/Register";
 
 
 const myCreatedRoute = createBrowserRouter([
@@ -30,6 +32,14 @@ const myCreatedRoute = createBrowserRouter([
             {
                 path: "/news",
                 element: <News></News>
+            },
+            {
+                path: "/login",
+                element: <Login></Login>
+            },
+            {
+                path: "/register",
+                element: <Register></Register>
             },
             {
                 path: "/events/:id",
