@@ -44,7 +44,7 @@ const Navber = () => {
     </ul>
   </div>
   <div className="navbar-end gap-2">
-  <p className="text-lg">{user?.displayName}</p>
+  <p className="hidden md:block md:text-lg">{user?.displayName}</p>
   < img className="h-[55px] rounded-full" src={user?.photoURL} />
           
        
