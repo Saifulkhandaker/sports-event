@@ -12,6 +12,8 @@ const Register = () => {
 
 
   const { signUp } = useContext(AuthContext);
+  const [name, setName] = useState('');
+  const [photoUrl, setPhotoUrl] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -26,11 +28,12 @@ const handleRegister = (e )=> {
     setError(
       "Password must be at least eight characters long and contain at least one uppercase letter and one special character."
     )
+    toast.error('Password must be at least eight characters long and contain at least one uppercase letter and one special character.')
    }
    else{
     setError('');
     if(email) {
-      signUp(email, password)
+      signUp(email, password, name, photoUrl)
       .then(result => 
         toast.success("successfully registered"));
         navigate("/login")
@@ -40,7 +43,6 @@ const handleRegister = (e )=> {
 
     return (
         <div>
-          <p className="text-lg text-center font-medium text-red-400">{error}</p>
              <div className="hero min-h-screen ">
               
         <div className="hero-content flex-col ">
@@ -55,6 +57,7 @@ const handleRegister = (e )=> {
                   <span className="label-text">Your Name</span>
                 </label>
                 <input
+                onChange={(e) => setName(e.target.value)}
                   type="text"
                   name="name"
                   placeholder="name"
@@ -67,6 +70,7 @@ const handleRegister = (e )=> {
                   <span className="label-text">Photo URL</span>
                 </label>
                 <input
+                onChange={(e) => setPhotoUrl(e.target.value)}
                   type="text"
                   name="photo"
                   placeholder="photo url"

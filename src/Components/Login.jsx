@@ -4,6 +4,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
  const { googleSignIn, signIn } = useContext(AuthContext);
@@ -11,23 +12,31 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
+  const navigate = useNavigate()
+
   const handleGoogle = () => {
     googleSignIn()
     .then(result=> {
-      console.log(result.user);
+      toast.success("Successfully logged in");
+      setTimeout(() => {
+        navigate("/");
+       }, 3000);
     })
   }
 
   const handleLogin = (e) => {
     e.preventDefault();
-
     if((email, password)){
       signIn(email, password).then(result =>{
         setError('');
-          toast.success("Successfully logged in")
+          toast.success("Successfully logged in");
+         setTimeout(() => {
+          navigate("/");
+         }, 3000);
       })
       .catch((err) => {
         setError("Invalid email or password");
+        toast.error('Invalid email or password')
       })
     }
 
@@ -36,7 +45,6 @@ const Login = () => {
 
   return (
     <div>
-      <p className="text-lg text-center font-medium text-red-400">{error}</p>
       <div className="hero min-h-screen ">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
@@ -78,6 +86,7 @@ const Login = () => {
               <div className="form-control mt-6">
                 <button onSubmit={handleLogin} className="btn bg-[#fe3c01d7] text-white">Login</button>
               </div>
+              <p>Or Login With Google</p>
               <button onClick={handleGoogle} className="btn bg-[#fe3c01d7] text-white">Login with Google</button>
               <p>Don't have an account!!! Please <Link className="font-medium underline text-red-600" to="/register">Register</Link></p>
             </form>
