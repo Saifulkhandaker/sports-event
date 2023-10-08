@@ -1,6 +1,6 @@
-#Project : Event-Management
-#Live-link:
-Project Features :
+# Project : Event-Management
+# Live-link: https://even-managment-e039a.web.app/
+# Project Features :
 
 # Feature 1: Event Details Page:
 - Clicking on a more details button the user redirect to a dedicated "Event Details" route.
