@@ -29,7 +29,6 @@ const name = form.get('name');
 const img = form.get('photo');
 const email = form.get('email');
 const password = form.get('password')
-console.log((email, name, img, password));
 // 
    if(!/^(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=.{8,})[a-zA-Z0-9@#$%^&+=!]*$/.test(password)){
     setError(
@@ -59,7 +58,6 @@ console.log((email, name, img, password));
     return (
         <div>
              <div className="hero min-h-screen ">
-              
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
           
@@ -72,7 +70,6 @@ console.log((email, name, img, password));
                   <span className="label-text">Your Name</span>
                 </label>
                 <input
-        
                   type="text"
                   name="name"
                   placeholder="name"
@@ -85,7 +82,6 @@ console.log((email, name, img, password));
                   <span className="label-text">Photo URL</span>
                 </label>
                 <input
-               
                   type="text"
                   name="photo"
                   placeholder="photo url"
@@ -97,7 +93,6 @@ console.log((email, name, img, password));
                   <span className="label-text">Email</span>
                 </label>
                 <input
-                 
                   type="email"
                   name="email"
                   placeholder="email"
@@ -111,7 +106,6 @@ console.log((email, name, img, password));
                   <span className="label-text">Password</span>
                 </label>
                 <input
-               
                   type="password"
                   name="password"
                   placeholder="password"

@@ -8,6 +8,7 @@ import Contact from "../Pages/Contact/Contact";
 import News from "../Pages/News/News";
 import Login from "../Components/Login";
 import Register from "../Components/Register";
+import PrivateRoute from "../providers/PrivateRoute";
 
 
 const myCreatedRoute = createBrowserRouter([
@@ -27,11 +28,17 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: "/contact",
-                element:<Contact></Contact>
+                element:
+                <PrivateRoute>
+                    <Contact></Contact>
+                </PrivateRoute>
             },
             {
                 path: "/news",
-                element: <News></News>
+                element: 
+                <PrivateRoute>
+                    <News></News>
+                </PrivateRoute>
             },
             {
                 path: "/login",
@@ -43,7 +50,11 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: "/events/:id",
-                element: <SingleEvent></SingleEvent>,
+                element: 
+                    <PrivateRoute>
+                        <SingleEvent></SingleEvent>
+                    </PrivateRoute>,
+                
                 loader: () => fetch('event.json')
             }
         ]
