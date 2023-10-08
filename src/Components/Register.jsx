@@ -33,10 +33,12 @@ const handleRegister = (e )=> {
    else{
     setError('');
     if(email) {
-      signUp(email, password, name, photoUrl)
+      signUp(email, password)
       .then(result => 
         toast.success("successfully registered"));
-        navigate("/login")
+        setTimeout(() => {
+          navigate("/login");
+         }, 3000);
     }
    }
 }

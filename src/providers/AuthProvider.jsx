@@ -19,7 +19,7 @@ const AuthProvider = ({children}) => {
     };
 
     // sign Up
-    const signUp = (email, password, name, photoURL) => {
+    const signUp = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password);
     };
 
