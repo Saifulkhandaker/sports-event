@@ -5,9 +5,11 @@ import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Login = () => {
  const { googleSignIn, signIn } = useContext(AuthContext);
+ const location = useLocation();
  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -27,7 +29,9 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     if((email, password)){
-      signIn(email, password).then(result =>{
+      signIn(email, password)
+      .then(result =>{
+        navigate(location?.state ? location.state : "/");
         setError('');
           toast.success("Successfully logged in");
          setTimeout(() => {
