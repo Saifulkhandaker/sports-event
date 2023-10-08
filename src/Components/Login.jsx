@@ -1,28 +1,55 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
+import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+ const { googleSignIn, signIn } = useContext(AuthContext);
+ const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const handleGoogle = () => {
+    googleSignIn()
+    .then(result=> {
+      console.log(result.user);
+    })
+  }
+
+
   const handleLogin = (e) => {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
-    const email = form.get('email');
-    const password = form.get('password');
-    console.log(email, password);
+
+    if((email, password)){
+      signIn(email, password).then(result =>{
+          toast.success("Successfully logged in")
+      })
+      .catch((err) => {
+        setError('');
+        setError("Invalid email or password");
+      })
+    }
+    
   };
 
   return (
     <div>
+      <p className="text-lg text-center font-medium text-red-400">{error}</p>
       <div className="hero min-h-screen ">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleLogin} className="card-body">
+            <form onSubmit={handleLogin}  className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
                 <input
+                onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   name="email"
                   placeholder="email"
@@ -35,6 +62,7 @@ const Login = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input
+                 onChange={(e) => setPassword(e.target.value)}
                   type="password"
                   name="password"
                   placeholder="password"
@@ -48,14 +76,27 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button onSubmit={handleLogin} className="btn btn-primary">Login</button>
               </div>
+              <button onClick={handleGoogle} className="btn btn-primary">Login with Google</button>
               <p>Don't have an account!!! Please <Link className="font-medium underline text-[#FE3E01]" to="/register">Register</Link></p>
             </form>
             
           </div>
         </div>
       </div>
+      <ToastContainer
+      position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+      ></ToastContainer>
     </div>
   );
 };
