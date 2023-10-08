@@ -11,11 +11,11 @@ import { useNavigate } from "react-router-dom";
 const Register = () => {
 
 
-  const { signUp } = useContext(AuthContext);
-  const [name, setName] = useState('');
-  const [photoUrl, setPhotoUrl] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const { signUp, handleUpdateProfile } = useContext(AuthContext);
+  // const [name, setName] = useState('');
+  // const [photoUrl, setPhotoUrl] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
 
@@ -23,7 +23,14 @@ const Register = () => {
 
 const handleRegister = (e )=> {
   e.preventDefault();
-
+// 
+const form = new FormData(e.currentTarget)
+const name = form.get('name');
+const img = form.get('photo');
+const email = form.get('email');
+const password = form.get('password')
+console.log((email, name, img, password));
+// 
    if(!/^(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=.{8,})[a-zA-Z0-9@#$%^&+=!]*$/.test(password)){
     setError(
       "Password must be at least eight characters long and contain at least one uppercase letter and one special character."
@@ -34,11 +41,17 @@ const handleRegister = (e )=> {
     setError('');
     if(email) {
       signUp(email, password)
-      .then(result => 
-        toast.success("successfully registered"));
-        setTimeout(() => {
-          navigate("/login");
-         }, 3000);
+      // 
+      .then(result => {
+        handleUpdateProfile(name, img)
+        .then(() => {
+          toast.success("successfully registered")
+          setTimeout(() => {    
+              navigate("/login");
+             }, 3000);
+        })
+      })
+      
     }
    }
 }
@@ -59,7 +72,7 @@ const handleRegister = (e )=> {
                   <span className="label-text">Your Name</span>
                 </label>
                 <input
-                onChange={(e) => setName(e.target.value)}
+        
                   type="text"
                   name="name"
                   placeholder="name"
@@ -72,7 +85,7 @@ const handleRegister = (e )=> {
                   <span className="label-text">Photo URL</span>
                 </label>
                 <input
-                onChange={(e) => setPhotoUrl(e.target.value)}
+               
                   type="text"
                   name="photo"
                   placeholder="photo url"
@@ -84,7 +97,7 @@ const handleRegister = (e )=> {
                   <span className="label-text">Email</span>
                 </label>
                 <input
-                  onChange={(e) => setEmail(e.target.value)}
+                 
                   type="email"
                   name="email"
                   placeholder="email"
@@ -98,7 +111,7 @@ const handleRegister = (e )=> {
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                onChange={(e) => setPassword(e.target.value)}
+               
                   type="password"
                   name="password"
                   placeholder="password"
@@ -110,7 +123,7 @@ const handleRegister = (e )=> {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button onSubmit={handleRegister} className="btn bg-[#fe3c01d7] text-white">Register</button>
+                <button className="btn bg-[#fe3c01d7] text-white">Register</button>
               </div>
               <p>Already have an account!!! Please <Link className="font-medium underline text-[#3cfe01]" to="/login">Login</Link></p>
             </form>
