@@ -30,7 +30,7 @@ const img = form.get('photo');
 const email = form.get('email');
 const password = form.get('password')
 // 
-   if(!/^(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=.{8,})[a-zA-Z0-9@#$%^&+=!]*$/.test(password)){
+   if(!/^(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=.{6,})[a-zA-Z0-9@#$%^&+=!]*$/.test(password)){
     setError(
       "Password must be at least eight characters long and contain at least one uppercase letter and one special character."
     )
