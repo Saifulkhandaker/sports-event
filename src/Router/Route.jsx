@@ -55,7 +55,7 @@ const myCreatedRoute = createBrowserRouter([
                         <SingleEvent></SingleEvent>
                     </PrivateRoute>,
                 
-                loader: () => fetch('event.json')
+                loader: () => fetch('/event.json')
             }
         ]
     }
