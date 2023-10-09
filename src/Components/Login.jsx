@@ -31,11 +31,10 @@ const Login = () => {
     if((email, password)){
       signIn(email, password)
       .then(result =>{
-        navigate(location?.state ? location.state : "/");
         setError('');
           toast.success("Successfully logged in");
          setTimeout(() => {
-          navigate("/");
+          navigate(location?.state ? location.state : "/");
          }, 3000);
       })
       .catch((err) => {

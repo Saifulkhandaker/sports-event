@@ -46,7 +46,7 @@ const password = form.get('password')
         .then(() => {
           toast.success("successfully registered")
           setTimeout(() => {    
-              navigate("/login");
+              navigate("/");
              }, 3000);
         })
       })
